@@ -1,0 +1,56 @@
+@import '../../variable';
+
+
+.containerBanner {
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    background-image: url(./images/content-top-fon.png);
+}
+
+.header__title {
+    margin: auto;
+    text-align: center;
+    max-width: 1024px;
+    padding-top: 217px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 69px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    color: $textColorLight;
+}
+
+.header__subtitle {
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+    padding-top: 45px;
+    padding-bottom: 108px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: $textColorLight;
+}
+
+.header__hire {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 110px;
+}
+
+.header__button {
+
+    padding: 19px;
+}
+
+.arrow-down {
+    text-align: center;
+    padding-bottom: 77px;
+}

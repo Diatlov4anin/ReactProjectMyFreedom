@@ -1,0 +1,25 @@
+@import '../../variable';
+
+.TeamCard {
+    text-align: center;
+    max-width: 390px;
+    color: $textColorDark;
+    font-family: 'Open Sans';
+    font-style: normal;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+
+    &__employee {
+        padding: 40px 0px 15px 0px;
+        font-weight: 600;
+        font-size: 24px;
+
+    }
+
+    &__rank {
+        max-width: 390px;
+        padding: 0px 0px 40px 0px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../variable';
+
+.second-container {
+    margin: auto;
+    background-size: cover;
+    max-width: 1600px;
+    background: $backGrndSky;
+
+    &__button {
+        text-align: center;
+        padding: 0px 0px 115px 0px;
+    }
+}
+
+.post-card {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 177.5px 22.5px 177.5px;
+}

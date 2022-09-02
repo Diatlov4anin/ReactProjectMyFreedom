@@ -1,0 +1,14 @@
+@import '../../variable';
+
+.first-container {
+    margin: auto;
+    background-size: cover;
+    max-width: 1600px;
+    background: $backGrndBasic;
+}
+
+.post-card {
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 115px;
+}

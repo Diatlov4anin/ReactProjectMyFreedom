@@ -1,0 +1,57 @@
+@import '../../variable';
+
+.card-price {
+    text-align: center;
+    font-family: 'Open Sans';
+    letter-spacing: 0.1em;
+    font-style: normal;
+    background-color: $backGrndBasic;
+
+
+    &__option {
+        margin: auto;
+        border-bottom: 1px solid grey;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 70px;
+    }
+
+    &__rate {
+        background-color: $elemPriceColor;
+        padding-bottom: 50px;
+    }
+
+    &__period {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 22px;
+    }
+
+}
+
+.card-price__title {
+    padding: 50px 117px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: $textColorLight;
+}
+
+span {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $textColorLight;
+}
+
+.card-price__btn {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}

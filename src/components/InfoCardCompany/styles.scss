@@ -1,0 +1,30 @@
+@import '../../variable';
+
+
+.post-card__label {
+    text-align: center;
+}
+
+.post-card__title {
+    padding-top: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: $textColorDark;
+}
+
+p {
+    padding-top: 30px;
+    max-width: 240px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $textColorDark;
+}

@@ -1,0 +1,30 @@
+@import '../../variable';
+
+.post__title {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    padding-top: 115px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.1em;
+    color: $textColorDark;
+}
+
+.post__subtitle {
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+    padding-top: 30px;
+    padding-bottom: 115px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: $textColorDark;
+}

@@ -1,0 +1,19 @@
+@import '../../variable';
+
+.blog-post{
+    margin: auto;
+    background-size: cover;
+    max-width: 1600px;
+    background: $backGrndBlog;
+
+    &__button{
+
+        text-align: center;
+        padding: 50px 0px 115px 0px;
+    }
+
+    &__average{
+        padding-left: 50px;
+    }
+}
+

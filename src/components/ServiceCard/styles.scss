@@ -1,0 +1,73 @@
+@import '../../variable';
+
+.cardService {
+background-color: $backGrndBasic;
+color: $textColorDark;
+text-align: center;
+margin: 22.5px;
+
+&__label {
+    padding: 50px 0px 40px 0px;
+}   
+
+&__title{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+}
+
+&__description{
+    padding: 20px 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+}
+
+&__button {
+padding: 20px 0px 50px 0px;
+}
+}
+
+.cardService-active {
+    background-color: $elemAcivColor;
+    color: $textColorLight;
+    text-align: center;
+    margin: 22.5px;
+    box-shadow: 0px 9px 10px 9px rgba($color: #a5a2a273, $alpha: 1.0);
+    
+    &__label {
+        padding: 50px 0px 40px 0px;
+    }   
+    
+    &__title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+    }
+    
+    &__description{
+        padding: 20px 4px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+    }
+    
+    &__button {
+    padding: 20px 0px 50px 0px;
+    background-color: $elemAcivColor;
+    border-color: $elemPassivColor;
+    color: $textColorLight;
+    }
+    }
