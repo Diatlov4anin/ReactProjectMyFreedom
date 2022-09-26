@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     padding: 25px 0px;
-    background-color: $backGrndBasic;
+    background-color: $backGrondBasic;
 
 
     &__nav-bar {
@@ -45,7 +45,7 @@
     padding: 25px;
 
     &:hover {
-        color: $elemAcivColor;
+        color: $elemActiveColor;
     }
 }
 

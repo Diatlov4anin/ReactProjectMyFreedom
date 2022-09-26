@@ -1,0 +1,12 @@
+@import '../../variable';
+
+.error__title {
+    padding: 50px;
+    text-align: center;
+    color: $elemActiveColor;
+}
+
+.error__img {
+    display: flex;
+    margin: auto;
+}

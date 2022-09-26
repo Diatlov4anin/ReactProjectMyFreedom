@@ -1,22 +1,26 @@
 import React from "react";
 import NavBar from "../../components/NavBar";
-import GoogleIcon from "../../images/googleicon.png";
-import FbIcon from "../../images/fbicon.png";
-import TwitterIcon from "../../images/twittericon.png";
-
+import Logo from "../../images/Logo.png";
+import { fallDown as Menu } from 'react-burger-menu';
 import "./styles.scss"
 
-const FooterPost = () => {
+
+const HeaderPost = () => {
     return (
         <div className="container">
 
-            <div className="footer">
-                <div className="footer__nav-bar">
+            <div className="header">
+                <div>
+                    <a href="/">
+                        <img src={Logo} alt="Logo" />
+                    </a>
+                </div>
+                <div className="header__nav-bar">
                     <NavBar />
                 </div>
                 <div className="menu-mobile">
                     <ul className="level1">
-                        <li >
+                        <li>
                             <a href="/" className="burger">MENU</a>
                             <ul className="level2">
                                 <li>
@@ -45,21 +49,31 @@ const FooterPost = () => {
 
                     </ul>
                 </div>
-                <div >
-                    <p>All rights Reserved &#169;{2017}</p>
-                    <div className="footer__link">
-                        <img src={GoogleIcon} alt="LinkGoogle" />
-                        <img src={TwitterIcon} alt="LinkTwitter" style={{ padding: "0px 10px 0px 0px" }} />
-                        <img src={FbIcon} alt="LinkFb" />
-                    </div>
-                </div>
+
+
+
+                {/* <a href="#" className="menu-mobile"
+                    onClick={() => console.log("open li")}
+                >MENU</a> */}
+
+
+
+                {/* <div >
+                    <a href="" className="menu-mobile">MENU</a>
+                    <Menu isOpen={false} >
+                        <div isOpen={true} className="header__menu">
+                            <NavBar />
+                        </div>
+                    </Menu >
+
+                </div> */}
+
             </div>
 
         </div>
 
-
-
     )
+
 };
 
-export default FooterPost;
+export default HeaderPost;

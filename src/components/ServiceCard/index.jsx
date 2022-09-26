@@ -1,16 +1,19 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { BUTTON_SERVICE_STYLE } from "./consatnts"
 import ButtonComponent from "../ButtonComponent";
 import ModalComponent from "../../components/ModalComponent";
 
-
 import "./styles.scss"
+
 
 const ServiceCard = ({ id, label, titleCard, description, cardStyle, buttonClick }) => {
 
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <>
-            <div key={id} className={cardStyle}>
+            <div key={id} className={cardStyle}
+                onClick={() => setShowModal(true)}>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -21,21 +24,20 @@ const ServiceCard = ({ id, label, titleCard, description, cardStyle, buttonClick
                         </div>
                         <div className="cardService__button col-12">
                             <ButtonComponent
-                          
                                 label={"READ MORE"}
-                                buttonStyle={"btnCardServicePassive"}
-                               
+                                buttonStyle={cardStyle === "cardService-active" ? BUTTON_SERVICE_STYLE.active : BUTTON_SERVICE_STYLE.passive}
                             />
-                            {/* <ModalComponent
-                             title="title"
-                             description="description"
-                             subtitle="subtitle"
-                            /> */}
                         </div>
-
                     </div>
                 </div>
             </div>
+            <ModalComponent
+                id={id}
+                show={showModal}
+                setShow={setShowModal}
+                title={titleCard}
+                description={description}
+            />
         </>
     )
 }

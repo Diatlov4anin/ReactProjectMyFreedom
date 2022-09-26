@@ -1,6 +1,5 @@
 import React from "react";
-import { BLOG_DATA } from './constants'
-
+import { BLOG_DATA, BLOG_TITLE_DATA } from './constants'
 import MainTitleComponent from "../../components/MainTitle"
 import FirstAvaBlog from "../../images/blog1.png"
 import SecondAvaBlog from "../../images/blog2.png"
@@ -8,17 +7,26 @@ import ThirdAvaBlog from "../../images/blog3.png"
 import ButtonComponent from "../../components/ButtonComponent";
 import BlogCard from "../../components/BlogCard";
 
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogMiddleware } from "../../store/middleware";
+
 import "./styles.scss"
 
-const BlogPost = (props) => {
+const BlogPost = () => {
 
-    const { titlePost, subtitlePost, label } = props
+    const dispatch = useDispatch();
+    const showBlogInfo = fetchBlogMiddleware();
+    const categoriesFetch = useSelector(state => state.fetchBlogReducer.blog);
+    const categoryObj = categoriesFetch.slice(0, 4);
+
     return (
         <>
             <div className="blog-post">
                 <MainTitleComponent
-                    mainTitle={titlePost}
-                    mainSubTitle={subtitlePost}
+                    mainTitle={BLOG_TITLE_DATA.titlePost}
+                    mainSubTitle={BLOG_TITLE_DATA.subtitlePost}
+                    titleStyle="post__title"
+                    subtitleStyle="post__subtitle"
                 />
                 <div className="container">
                     <div className="row">
@@ -29,8 +37,8 @@ const BlogPost = (props) => {
                             <BlogCard
                                 link={BLOG_DATA.link}
                                 date={BLOG_DATA.date}
-                                development={BLOG_DATA.development} 
-                                detail={BLOG_DATA.detail}/>
+                                development={BLOG_DATA.development}
+                                detail={BLOG_DATA.detail} />
                         </div>
                     </div>
                     <div className="blog-post__average row">
@@ -52,10 +60,10 @@ const BlogPost = (props) => {
                         </div>
                         <div className="col-sm-12 col-lg-6">
                             <BlogCard
-                               link={BLOG_DATA.link}
-                               date={BLOG_DATA.date}
-                               development={BLOG_DATA.development}
-                               detail={BLOG_DATA.detail} />
+                                link={BLOG_DATA.link}
+                                date={BLOG_DATA.date}
+                                development={BLOG_DATA.development}
+                                detail={BLOG_DATA.detail} />
                         </div>
                     </div>
                 </div>
@@ -63,7 +71,23 @@ const BlogPost = (props) => {
                     <ButtonComponent
                         label={"MORE ALL"}
                         buttonStyle={"btnStyle-active"}
+                        buttonClick={() => showBlogInfo(dispatch)}
                     />
+                </div>
+
+                <div>
+                    {categoryObj.map(({ name, image, id }) => (
+                        <div key={id} className=" blog-post__disclosure row" >
+                            <div className="blog-post__disclosureCard col-sm-12 col-lg-6 p-2">
+
+                                <div >
+                                    <img src={image} alt="Product" />
+                                </div>
+                                <div >Category: {name}</div>
+                            </div>
+                        </div>
+                    ))}
+
                 </div>
 
             </div>

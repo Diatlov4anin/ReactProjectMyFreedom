@@ -1,12 +1,12 @@
 import React from "react";
-import HeaderNavPost from "../../templates/HeaderNavPost";
+import HeaderPost from "../../templates/HeaderPost";
 import { Outlet } from "react-router-dom";
 
 
 const Layout = () => {
     return (
         <>
-            <HeaderNavPost />
+            <HeaderPost />
             <Outlet />
         </>
     )

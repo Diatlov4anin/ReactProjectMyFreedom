@@ -1,53 +1,61 @@
 import React, { useState } from "react";
-import { Button } from "bootstrap";
-import {Modal} from "bootstrap";
-import ButtonComponent from "../ButtonComponent";
+import Modal from "react-bootstrap/Modal";
 
 import "./styles.scss"
 
 const ModalComponent = (props) => {
     const {
+        id,
         title,
         description,
         subtitle,
+        show,
+        setShow
     } = props;
-
-    const [show, setShow] = useState(false);
-    const nandleClose = () => setShow(false);
-    const nandleShow = () => setShow(true);
 
     return (
         <>
-            <ButtonComponent
-                onClick={nandleShow}
+            <div className={show ? "modal active" : "modal"}
+                onClick={() => setShow(false)}
+                key={id}
             >
-                Show More
-            </ButtonComponent>
-            <div className="modal">
-                <Modal className="modal__item"
-                    show={show} onHide={nandleClose}
+                <div className={show ? "modal__item active" : "modal__item"}
+                    onClick={e => e.stopPropagation}
                 >
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                            <div>{title}</div>
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <p>{subtitle}</p>
-                                </div>
-                                <div className="col-12">
-                                    <div>{description}</div>
-                                </div>
+                    <div>{title}</div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <p>{subtitle}</p>
+                            </div>
+                            <div className="col-12">
+                                <div>{description}</div>
                             </div>
                         </div>
-                    </Modal.Body>
-                </Modal>
+                    </div>
 
+                    {/* <Modal
+                        key={id}>
+                        <Modal.Header >
+                            <Modal.Title>
+                                <div>{title}</div>
+                            </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <p>{subtitle}</p>
+                                    </div>
+                                    <div className="col-12">
+                                        <div>{description}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Modal.Body>
+                    </Modal> */}
+                </div>
             </div>
-
         </>
     );
 }

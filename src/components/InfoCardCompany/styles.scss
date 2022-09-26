@@ -6,6 +6,7 @@
 }
 
 .post-card__title {
+    margin: auto;
     padding-top: 30px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -16,7 +17,8 @@
     color: $textColorDark;
 }
 
-p {
+.post-card__subtitle {
+    margin: auto;
     padding-top: 30px;
     max-width: 240px;
     font-family: 'Open Sans';
@@ -28,3 +30,28 @@ p {
     letter-spacing: 0.1em;
     color: $textColorDark;
 }
+
+.post-card__title-contact {
+    margin: auto;
+    padding-top: 30px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $textColorLight;
+}
+
+.post-card__subtitle-contact {
+    margin: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $textColorLight;
+    }

@@ -3,7 +3,7 @@ import React from "react";
 import "./styles.scss";
 
 const InfoCardCompany = (props) => {
-    const { icon, titleInfo, subtitleInfo } = props;
+    const { icon, titleInfo, subtitleInfo, titleStyle, subtitleStyle } = props;
 
     return (
         <div  style={{ cursor: "pointer" }}
@@ -12,12 +12,12 @@ const InfoCardCompany = (props) => {
             <div>
                 {icon}
             </div>
-            <div className="post-card__title">
+            <div className={titleStyle}>
                 {titleInfo}
             </div>
-            <p>
+            <div className={subtitleStyle}>
                 {subtitleInfo}
-            </p>
+            </div>
 
         </div>
     );

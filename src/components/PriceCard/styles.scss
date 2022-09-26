@@ -1,11 +1,70 @@
 @import '../../variable';
 
+.card-price-active {
+    text-align: center;
+    font-family: 'Open Sans';
+    letter-spacing: 0.1em;
+    font-style: normal;
+    background-color: $backGrondBasic;
+    box-shadow: 0px 9px 10px 9px rgba($color: #a5a2a273, $alpha: 1.0);
+
+    &__option {
+        margin: auto;
+        border-bottom: 1px solid grey;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 70px;
+    }
+
+    &__rate {
+        background-color: $elemPriceColor;
+        padding-bottom: 50px;
+    }
+
+    &__periods{
+        padding-right: 10px;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 22px;
+        color: $textColorLight;
+    }
+
+    &__title {
+        padding: 50px 117px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+        color: $textColorLight;
+    }
+    
+    &__sp {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: $textColorLight;
+    }
+    
+    &__btn {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+
+}
+
+
 .card-price {
     text-align: center;
     font-family: 'Open Sans';
     letter-spacing: 0.1em;
     font-style: normal;
-    background-color: $backGrndBasic;
+    background-color: $backGrondBasic;
 
 
     &__option {
@@ -21,37 +80,39 @@
         padding-bottom: 50px;
     }
 
-    &__period {
+    &__periods{
+        padding-right: 10px;
         font-weight: 400;
         font-size: 50px;
         line-height: 22px;
+        color: $textColorLight;
     }
 
-}
+    &__title {
+        padding: 50px 117px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+        color: $textColorLight;
+    }
+    
+    &__sp {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: $textColorLight;
+    }
+    
+    &__btn {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
 
-.card-price__title {
-    padding: 50px 117px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
-    color: $textColorLight;
-}
-
-span {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 22px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: $textColorLight;
-}
-
-.card-price__btn {
-    padding-top: 45px;
-    padding-bottom: 50px;
 }

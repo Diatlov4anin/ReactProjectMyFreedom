@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 25px 0px;
-    background-color: $backGrndBasic;
+    background-color: $backGrondBasic;
 
 
     &__nav-bar {
@@ -28,7 +28,7 @@
     padding: 25px;
 
     &:hover {
-        color: $elemAcivColor;
+        color: $elemActiveColor;
     }
 }
 
@@ -78,7 +78,45 @@
         padding: 10px;
         font-size: 50px;
         text-decoration: none;
-        color: black;
+        color: $textColorDark;
     }
 
+}
+
+
+.level1 {
+    text-align: center;
+}
+
+li {
+    position: relative;
+    background-color: $backGrondBasic;
+    list-style-type: none;
+}
+
+.burger {
+    display: block;
+    text-decoration: none;
+    color: $textColorDark;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    padding: 25px;
+
+    &:hover {
+        color: $textColorLight;
+        background-color: $elemActiveColor;
+    }
+}
+
+.level1>li:hover .level2 {
+    display: block;
+}
+
+.level2 {
+    display: none;
+    position: absolute;
 }

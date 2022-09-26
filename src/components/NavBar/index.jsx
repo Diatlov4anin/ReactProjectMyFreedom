@@ -10,8 +10,7 @@ const NavBar = () => {
             <ul className="nav__list">
                 {NAV_BAR_DATA.map(({ id, label, url }) => (
                     <li key={id} className="nav__link">
-                        <a href= {url}>{label}</a>
-                      {/* <Link to = {url}>{label}</Link> */}
+                        <Link to={url}>{label}</Link>
                     </li>
                 ))}
             </ul>

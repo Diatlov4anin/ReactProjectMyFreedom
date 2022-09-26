@@ -1,3 +1,8 @@
+export const PRICE_TITLE_DATA = {
+    titlePost: "Pricing Plan",
+    subtitlePost: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+}
+
 export const PRICE_CARD_DATA = [
     {
         id: 0,
@@ -12,7 +17,7 @@ export const PRICE_CARD_DATA = [
             "24/7 Suports",
         ],
         label: "ORDER NOW",
-        buttonStyle: "btnCardServicePassive",
+        buttonStyle: "btnCardPassive",
     },
     {
         id: 1,
@@ -27,7 +32,7 @@ export const PRICE_CARD_DATA = [
             "24/7 Suports",
         ],
         label: "ORDER NOW",
-        buttonStyle: "btnCardServicePassive",
+        buttonStyle: "btnCardPassive",
     },
     {
         id: 2,
@@ -42,6 +47,12 @@ export const PRICE_CARD_DATA = [
             "24/7 Suports",
         ],
         label: "ORDER NOW",
-        buttonStyle: "btnCardServicePassive",
+        buttonStyle: "btnCardPassive",
     },
 ]
+
+export const CARD_PRICE_STYLES ={
+    active: "card-price-active",
+    passive: "card-price",
+
+}

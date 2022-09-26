@@ -6,6 +6,11 @@ import TwitConnect from "../../images/twitter.png"
 import ChatConnect from "../../images/chat.png"
 import DribConnect from "../../images/dribble.png"
 
+export const TEAM_TITLE_DATA = {
+    titlePost: "Our Team Member",
+    subtitlePost: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+}
+
 export const TEAM_PERSON_DATA = [
     {
         id: 0,

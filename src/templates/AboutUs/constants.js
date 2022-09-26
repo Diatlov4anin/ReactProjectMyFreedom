@@ -24,3 +24,7 @@ export const LABEL_INFO_COMPANY = [
 }
 ];
 
+export const TITLE_DATA = {
+    titlePost: "About Us",
+    subtitlePost: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+}

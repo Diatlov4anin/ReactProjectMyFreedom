@@ -5,7 +5,7 @@ import ArrowDown from "./images/arrowdown.png"
 
 import "./styles.scss"
 
-const HeaderBanner = () => {
+const BannerPost = () => {
 
     const [buttonStyle, setButtonStyle] = useState("btnStyle-passive");
     const [buttonStyle2, setButtonStyle2] = useState("btnStyle-passive");
@@ -26,7 +26,7 @@ const HeaderBanner = () => {
                         label={HEADER_DATA.buttonLabelOurServices}
                         buttonStyle={buttonStyle}
                     />
-                </div>;
+                </div>
                 <div className="header__button"
                     onMouseOver={() => setButtonStyle2("btnStyle-active")}
                     onMouseLeave={() => setButtonStyle2("btnStyle-passive")}
@@ -35,12 +35,12 @@ const HeaderBanner = () => {
                         label={HEADER_DATA.buttonLabelHire}
                         buttonStyle={buttonStyle2}
                     />
-                </div>;
+                </div>
 
             </div>
             <div className="arrow-down"
                 style={{ cursor: "pointer" }}
-            // onClick={() => scrollY}
+            // onClick={() => scrollTo()}
             >
                 <img src={ArrowDown} alt="arrowdown" />
             </div>
@@ -50,4 +50,4 @@ const HeaderBanner = () => {
     );
 };
 
-export default HeaderBanner;  
+export default BannerPost;  

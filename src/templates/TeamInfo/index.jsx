@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { TEAM_PERSON_DATA } from "./constants"
+import { TEAM_PERSON_DATA, TEAM_TITLE_DATA } from "./constants"
 import MainTitleComponent from "../../components/MainTitle"
 import TeamCard from "../../components/TeamCard"
 
 import "./styles.scss";
 
 const TeamInfo = (props) => {
-    const { titlePost, subtitlePost, label } = props
+    const { label } = props
     const [teamCardInfo, setTeamCardInfo] = useState([]);
 
     useEffect(() => {
         const fetchDataFromServer = async () => {
-            const response = await fetch("https://jsonplaceholder.typicode.com/users?limit=3");
+            const response = await fetch('https://jsonplaceholder.typicode.com/users');
             const responseData = await response.json();
             setTeamCardInfo(responseData);
         }
@@ -19,41 +19,37 @@ const TeamInfo = (props) => {
 
     }, []);
 
+    const serverLimitedData = teamCardInfo.slice(0, 3);
+    const familyCompany = TEAM_PERSON_DATA.map((item, index) => ({ ...item, ...serverLimitedData[index] }))
+
     return (
         <>
             <div className="team-post">
                 <MainTitleComponent
-                    mainTitle={titlePost}
-                    mainSubTitle={subtitlePost}
+                    mainTitle={TEAM_TITLE_DATA.titlePost}
+                    mainSubTitle={TEAM_TITLE_DATA.subtitlePost}
+                    titleStyle = "post__title"
+                    subtitleStyle = "post__subtitle" 
                 />
                 <div className="container">
                     <div className="row">
-                        {TEAM_PERSON_DATA.map(({ id, photo, employee, rank, item, index, connection, mailPerson, linkMail }) => (
+
+                        {familyCompany.map(({ id, photo, name, username, item, index, connection, email, linkMail }) => (
                             <div key={id} className="col-sm-12 col-lg-4">
                                 <TeamCard
                                     id={id}
                                     photo={photo}
-                                    employee={employee}
-                                    rank={rank}
+                                    employee={name}
+                                    rank={username}
                                     item={item}
                                     index={index}
                                     connection={connection}
-                                    mailPerson={mailPerson}
+                                    mailPerson={email}
                                     linkMail={linkMail}
                                 />
                             </div>
                         ))}
-                        {/* {teamCardInfo.map(({ id, name, username, email }) => (
-                            <div key={id} className="col-4">
-                                <TeamCard
-                                    id={id}
-                                    employee={name}
-                                    rank={username}
-                                    mailPerson={email}
-                              
-                                />
-                            </div>
-                        ))} */}
+
                     </div>
                 </div>
             </div>

@@ -15,17 +15,17 @@ button {
 }
 
 .btnStyle-active {
-    background: $elemAcivColor;
-    border: 4px solid $elemAcivColor;
+    background: $elemActiveColor;
+    border: 4px solid $elemActiveColor;
 }
 
 .btnStyle-passive {
-    border: 4px solid $elemPassivColor;
+    border: 4px solid $elemPassiveColor;
     text-align: center;
     background: transparent;
 }
 
-.btnCardServicePassive{
+.btnCardPassive{
     box-sizing: border-box;
     width: 160px;
     height: 54.56px;
@@ -41,4 +41,48 @@ button {
     line-height: 22px;
     text-align: center;
     letter-spacing: 0.1em;
+}
+
+.btnCardActiveService{
+    box-sizing: border-box;
+    width: 160px;
+    height: 54.56px;
+    left: 720px;
+    top: 2708.58px;
+    background: transparent;
+    border: 2px solid $elemPassiveColor;
+    color: $textColorLight;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.btnCardActivePrice{
+    box-sizing: border-box;
+    width: 160px;
+    height: 54.56px;
+    left: 720px;
+    top: 2708.58px;
+    background: $elemActiveColor;
+    border: 2px solid $elemActiveColor;
+    color: $textColorLight;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.btnStyle-ContactActive {
+    background: $elemPriceColor;
+    border: none;
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
 }
